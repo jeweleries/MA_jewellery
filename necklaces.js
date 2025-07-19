@@ -19,6 +19,20 @@ const necklaces = [
         image: "Van Cleef Chain.jpg",
         price: "100"
     },
+    {
+        name: "Bow Necklace",
+        image: "Bow Necklace.jpg",
+        price: "100"
+    },
+    {
+        name: "Butterfly with Beads Necklace",
+        image: "Butterfly with Beads Necklace.jpg",
+        price: "100"
+    }
+    
+    
+    
+    
 ];
 
 const necklaceList = document.getElementById('necklaceList');
