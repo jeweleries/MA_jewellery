@@ -2,12 +2,12 @@ const bracelets = [
     {
         name: "Nail Bangle Bracelet",
         image: "Nail Bangle Bracelet.jpg",
-        price: "100"
+        price: "100",
     },
     {
         name: "Van Cleef Black Bracelet",
         image: "Van Cleef Black Bracelet.jpg",
-        price: "100"
+        price: "100",
     },
     {
         name: "Cartier Bracelet",
