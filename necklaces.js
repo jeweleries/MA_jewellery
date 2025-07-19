@@ -3,16 +3,19 @@ const necklaces = [
         name: "Double Butterfly Necklace",
         image: "Double Butterfly Necklace.jpg",
         price: "100",
+        colors: ["Silver", "Golden"]
     },
     {
         name: "Heart Necklace",
         image: "Heart Necklace.jpg",
         price: "100",
+        colors: ["Silver", "Golden"]
     },
     {
         name: "White Butterfly Necklace",
         image: "White Butterfly Necklace.jpg",
-        price: "100"
+        price: "100",
+        colors: ["Silver", "Golden"]
     },
     {
         name: "Van Cleef Chain",
