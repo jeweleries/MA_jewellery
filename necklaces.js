@@ -28,7 +28,7 @@ necklaces.forEach(necklace => {
     card.innerHTML = `
         <img src="${necklace.image}" alt="${necklace.name}">
         <h3>${necklace.name}</h3>
-        <p>${necklace.description}</p>
+        <p>${necklace.price}</p>
     `;
     necklaceList.appendChild(card);
 });
