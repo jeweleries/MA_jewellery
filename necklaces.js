@@ -1,19 +1,24 @@
 const necklaces = [
     {
-        name: "Pearl Necklace",
-        image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
-        description: "Classic pearls for elegance and style."
+        name: "Double Butterfly Necklace",
+        image: "Double Butterfly Necklace.jpg",
+        price: "100"
     },
     {
-        name: "Pendant Necklace",
-        image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
-        description: "A unique pendant for a personal touch."
+        name: "Heart Necklace",
+        image: "Heart Necklace.jpg",
+        price: "100"
     },
     {
-        name: "Layered Necklace",
-        image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
-        description: "Trendy layered chains for modern looks."
-    }
+        name: "White Butterfly Necklace",
+        image: "White Butterfly Necklace.jpg",
+        price: "100"
+    },
+    {
+        name: "Van Cleef Chain",
+        image: "Van Cleef Chain.jpg",
+        price: "100"
+    },
 ];
 
 const necklaceList = document.getElementById('necklaceList');
