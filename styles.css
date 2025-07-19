@@ -115,3 +115,15 @@ footer {
     font-size: 1rem;
     margin-top: 3rem;
 }
+.color-select {
+    margin-top: 0.7rem;
+    text-align: center;
+}
+.color-select label {
+    margin: 0 0.5em;
+    font-size: 0.93em;
+    cursor: pointer;
+}
+.color-select input[type="radio"] {
+    margin-right: 0.3em;
+}
