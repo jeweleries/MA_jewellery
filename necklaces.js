@@ -26,7 +26,7 @@ const necklaces = [
     {
         name: "Bow Necklace",
         image: "Bow Necklace.jpg",
-        price: "100",
+        price: "1199 rs",
         colors: ["Silver", "Golden"]
         
     },
@@ -35,8 +35,76 @@ const necklaces = [
         image: "Butterfly with Beads Necklace.jpg",
         price: "100",  
         colors: ["Silver", "Golden"]
-    }
+    },
+    {
+        name: "Diamond Dog Necklace",
+        image: "Diamond Dog Necklace.jpg",
+        price: "100",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Gold Foil Circle Chain",
+        image: "Gold Foil Circle Chain.jpg",
+        price: "100",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Gold Foil Pearl Necklace",
+        image: "Gold Foil Pearl Necklace.jpg",
+        price: "100",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Luna Necklace",
+        image: "Luna Necklace.jpg",
+        price: "100",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Marbled Classy Gold Chain Necklace",
+        image: "Marbled Classy Gold Chain Necklace.jpg",
+        price: "100",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Interlocking Roman Necklace",
+        image: "Interlocking Roman Necklace.jpg",
+        price: "100",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Two Sided Heart Necklace",
+        image: "Two Sided Heart Necklace.jpg",
+        price: "100",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Square Crystal Necklace",
+        image: "Square Crystal Necklace.jpg",
+        price: "100",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Red Cherry Necklace",
+        image: "Red Cherry Necklace.jpg",
+        price: "100",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Gold Diamond Moon Necklace",
+        image: "Gold Diamond Moon Necklace.jpg",
+        price: "100",  
+        colors: ["Golden"]
+    },
+
     
+ 
+    
+    
+     
+    
+     
+   
     
     
     
