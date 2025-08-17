@@ -19,7 +19,7 @@ bracelets.forEach(bracelet => {
     card.innerHTML = `
         <img src="${bracelet.image}" alt="${bracelet.name}">
         <h3>${bracelet.name}</h3>
-        <p>${bracelet.price} rs</p>
+        <p>${bracelet.price}</p>
         <button onclick='addToCart(${JSON.stringify(bracelet)})'>Add to Cart</button>
     `;
     braceletList.appendChild(card);
