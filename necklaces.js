@@ -97,23 +97,11 @@ const necklaces = [
         colors: ["Golden"]
     },
 
-    
- 
-    
-    
-     
-    
-     
-   
-    
-    
-    
 ];
 const necklaceList = document.getElementById('necklaceList');
 necklaces.forEach((necklace, idx) => {
     const card = document.createElement('div');
     card.className = 'item-card';
-    // Color selection
     let colorOptions = `<div class="color-select"><label>Choose color:</label>`;
     necklace.colors.forEach((color, i) => {
         colorOptions += `
@@ -130,7 +118,21 @@ necklaces.forEach((necklace, idx) => {
         <h3>${necklace.name}</h3>
         <p>${necklace.price}</p>
         ${colorOptions}
+        <button onclick="addNecklaceToCart(${idx})">Add to Cart</button>
     `;
     necklaceList.appendChild(card);
 });
+
+function addNecklaceToCart(idx) {
+    const colorInputs = document.getElementsByName(`necklace-color-${idx}`);
+    let selectedColor = "";
+    colorInputs.forEach(input => {
+        if (input.checked) selectedColor = input.value;
+    });
+    const necklace = { ...necklaces[idx], color: selectedColor };
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    cart.push(necklace);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(necklace.name + " (" + selectedColor + ") added to cart!");
+}
 
