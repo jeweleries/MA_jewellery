@@ -1,4 +1,3 @@
-// Simple cart loader using localStorage
 function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const cartItemsDiv = document.getElementById('cartItems');
@@ -12,8 +11,8 @@ function loadCart() {
     }
 
     cart.forEach((item, idx) => {
-        // Sirf number nikalne ke liye
-        const priceNum = parseInt(item.price);
+        // Safe parse: sirf digits nikal lo
+        const priceNum = parseInt(item.price.toString().replace(/\D/g, "")) || 0;
 
         total += priceNum;
 
@@ -38,6 +37,7 @@ function removeFromCart(index) {
     localStorage.setItem('cart', JSON.stringify(cart));
     loadCart();
 }
+
 function placeOrder() {
     const name = document.getElementById('customerName').value;
     const phone = document.getElementById('customerPhone').value;
@@ -49,7 +49,6 @@ function placeOrder() {
         return;
     }
 
-    // 🎀 Decorated heading + icons
     let orderDetails = `✨ *📦 NEW ORDER RECEIVED 📦* ✨%0A%0A` +
                        `👤 *Name:* ${name}%0A` +
                        `📞 *Phone:* ${phone}%0A` +
@@ -59,12 +58,11 @@ function placeOrder() {
     let total = 0;
 
     cart.forEach((item, i) => {
-        const priceNum = parseInt(item.price);
+        const priceNum = parseInt(item.price.toString().replace(/\D/g, "")) || 0;
         total += priceNum;
         orderDetails += `${i+1}. ${item.name} - Rs ${priceNum}${item.color ? " ("+item.color+")" : ""}%0A`;
     });
 
-    // ⭐ Total decorated
     orderDetails += `%0A⭐ *Total:* Rs ${total} ⭐`;
 
     // 👉 Your WhatsApp Number
