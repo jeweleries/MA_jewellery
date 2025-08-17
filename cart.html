@@ -23,6 +23,13 @@
             <div class="item-list" id="cartItems"></div>
             <div id="cartTotal" style="text-align:center; font-size:1.2em; margin-top:1em;"></div>
         </section>
+         <section class="order-form" style="margin-top:2em; text-align:center;">
+            <h2>Place Your Order</h2>
+            <input type="text" id="customerName" placeholder="Your Name" required><br><br>
+            <input type="text" id="customerPhone" placeholder="Phone Number" required><br><br>
+            <textarea id="customerAddress" placeholder="Delivery Address" required></textarea><br><br>
+            <button onclick="placeOrder()">Place Order</button>
+        </section>
     </main>
     <footer>
         <p>&copy; 2025 Jewelleries. All rights reserved.</p>
