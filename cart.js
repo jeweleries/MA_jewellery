@@ -38,7 +38,6 @@ function removeFromCart(index) {
     localStorage.setItem('cart', JSON.stringify(cart));
     loadCart();
 }
-
 function placeOrder() {
     const name = document.getElementById('customerName').value;
     const phone = document.getElementById('customerPhone').value;
@@ -50,7 +49,12 @@ function placeOrder() {
         return;
     }
 
-    let orderDetails = `*New Order Received*%0A%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0A%0AItems:%0A`;
+    // 🎀 Decorated heading + icons
+    let orderDetails = `✨ *📦 NEW ORDER RECEIVED 📦* ✨%0A%0A` +
+                       `👤 *Name:* ${name}%0A` +
+                       `📞 *Phone:* ${phone}%0A` +
+                       `🏠 *Address:* ${address}%0A%0A` +
+                       `🛍️ *Items:*%0A`;
 
     let total = 0;
 
@@ -60,7 +64,8 @@ function placeOrder() {
         orderDetails += `${i+1}. ${item.name} - Rs ${priceNum}${item.color ? " ("+item.color+")" : ""}%0A`;
     });
 
-    orderDetails += `%0ATotal: Rs ${total}`;
+    // ⭐ Total decorated
+    orderDetails += `%0A⭐ *Total:* Rs ${total} ⭐`;
 
     // 👉 Your WhatsApp Number
     window.open(`https://wa.me/923363766403?text=${orderDetails}`, "_blank");
