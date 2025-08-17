@@ -2,23 +2,14 @@ const bracelets = [
     {
         name: "Nail Bangle Bracelet",
         image: "Nail Bangle Bracelet.jpg",
-        price: "100",
-    },
-    {
-        name: "Van Cleef Black Bracelet",
-        image: "Van Cleef Black Bracelet.jpg",
-        price: "100",
+        price: "Rs 1399",
     },
     {
         name: "Cartier Bracelet",
         image: "Cartier Bracelet.jpg",
-        price: "100"
+        price: "Rs 1499"
     },
-    {
-        name: "Van Cleef White Bracelet",
-        image: "Van Cleef White Bracelet.jpg",
-        price: "100"
-    }
+    
 ];
 
 const braceletList = document.getElementById('braceletList');
