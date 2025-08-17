@@ -19,7 +19,6 @@ const bracelets = [
         image: "Van Cleef White Bracelet.jpg",
         price: "100"
     }
-    
 ];
 
 const braceletList = document.getElementById('braceletList');
@@ -29,7 +28,15 @@ bracelets.forEach(bracelet => {
     card.innerHTML = `
         <img src="${bracelet.image}" alt="${bracelet.name}">
         <h3>${bracelet.name}</h3>
-        <p>${bracelet.price}</p>
+        <p>${bracelet.price} rs</p>
+        <button onclick='addToCart(${JSON.stringify(bracelet)})'>Add to Cart</button>
     `;
     braceletList.appendChild(card);
 });
+
+function addToCart(item) {
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    cart.push(item);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(item.name + " added to cart!");
+}
