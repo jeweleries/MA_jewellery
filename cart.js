@@ -49,7 +49,7 @@ function placeOrder() {
     });
 
     let total = cart.reduce((sum, item) => sum + Number(item.price), 0);
-    orderDetails += `%0ATotal: ${total} rs`;
+    orderDetails += `%0ATotal: ${total} Rs`;
 
     // 👉 Your WhatsApp Number
     window.open(`https://wa.me/923363766403?text=${orderDetails}`, "_blank");
