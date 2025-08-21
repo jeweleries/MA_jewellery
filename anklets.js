@@ -23,7 +23,7 @@ const anklets = [
         name: "Single Diamond Anklet",
         image: "Single Diamond Anklet.jpg",
         price: "Rs 949"
-    },
+    }
     
     
 ];
@@ -47,5 +47,6 @@ function addToCart(item) {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(item.name + " added to cart!");
 }
+
 
 
