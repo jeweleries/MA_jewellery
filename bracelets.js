@@ -45,11 +45,6 @@ const bracelets = [
         price: "Rs 699"
     },
     {
-        name: "Diamond Studded Gold Bracelet",
-        image: "Diamond Studded Gold Bracelet.jpg",
-        price: "Rs 699"
-    },
-    {
         name: "White Flower Bracelet",
         image: "Van Cleef Bracelet White.jpg",
         price: "Rs 1050"
