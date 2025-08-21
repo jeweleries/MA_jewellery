@@ -1,14 +1,26 @@
 const anklets = [
     {
-        name: "Silver Charm Anklet",
-        image: "Silver Charm Anklet.jpg",
-        price: "Rs 899",
+        name: "Beads Anklet",
+        image: "Beads Anklet.jpg",
+        price: "Rs 999",
     },
     {
-        name: "Gold Beaded Anklet",
-        image: "Gold Beaded Anklet.jpg",
-        price: "Rs 999"
+        name: "Bow Anklet",
+        image: "Bow Anklet.jpg",
+        price: "Rs 1099"
     },
+    {
+        name: "Dragonfly Anklet",
+        image: "Dragonfly Anklet.jpg",
+        price: "Rs 1099"
+    },
+    {
+        name: "Butterfly Anklet",
+        image: "Butterfly Anklet.jpg",
+        price: "Rs 1099"
+    },
+    
+    
 ];
 
 const ankletList = document.getElementById('ankletList');
@@ -30,3 +42,4 @@ function addToCart(item) {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(item.name + " added to cart!");
 }
+
