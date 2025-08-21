@@ -142,3 +142,9 @@ footer {
     background: #2D0E3B;
     color: #FAF7F3;
 }
+.bottom-cart {
+    position: fixed;
+    bottom: 20px;   /* page ke bottom se 20px upar */
+    right: 20px;    /* right corner pe */
+    z-index: 1000;  /* sabke upar rahe */
+}
