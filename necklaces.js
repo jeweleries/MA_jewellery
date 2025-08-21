@@ -96,7 +96,43 @@ const necklaces = [
         price: "Rs 699",  
         colors: ["Golden"]
     },
-
+    {
+        name: "BowTie Necklace",
+        image: "BowTie Necklace.jpg",
+        price: "Rs 1150",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Dew Drop Diamond Necklace",
+        image: "Dew Drop Diamond Necklace.jpg",
+        price: "Rs 1550",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Diamond Butterfly Necklace",
+        image: "Diamond Butterfly Necklace.jpg",
+        price: "Rs 1199",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Double Diamond Necklace",
+        image: "Double Diamond Necklace.jpg",
+        price: "Rs 1599",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Emerald Necklace",
+        image: "Emerald Necklace.jpg",
+        price: "Rs 1299",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Pink Stone Necklace",
+        image: "Pink Stone Necklace.jpg",
+        price: "Rs 1249",  
+        colors: ["Golden"]
+    }
+    
 ];
 const necklaceList = document.getElementById('necklaceList');
 necklaces.forEach((necklace, idx) => {
