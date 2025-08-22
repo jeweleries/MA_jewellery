@@ -63,6 +63,11 @@ const bracelets = [
         name: "Knot Handcuff",
         image: "Knot Handcuff.jpg",
         price: "Rs 1799"
+    },
+    {
+        name: "Pearl Bracelets",
+        image: "Pearl Bracelets.jpg",
+        price: "Rs 1499"
     }
      
    
