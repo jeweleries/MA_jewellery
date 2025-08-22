@@ -31,11 +31,15 @@ function loadCart() {
 
     const finalTotal = subtotal + deliveryCharges;
 
-    document.getElementById('cartTotal').innerHTML = `
-        Subtotal: Rs ${subtotal} <br>
-        Delivery Charges: Rs ${deliveryCharges} <br>
-        <strong>Total: Rs ${finalTotal}</strong>
-    `;
+   document.getElementById('cartTotal').innerHTML = `
+    <div class="cart-total-box">
+        <strong>Subtotal:</strong> Rs ${subtotal} <br>
+        <strong>Delivery Charges:</strong> Rs ${deliveryCharges} <br>
+        <hr>
+        <span class="final-total">Total: Rs ${finalTotal}</span>
+    </div>
+`;
+
 }
 
 function removeFromCart(index) {
