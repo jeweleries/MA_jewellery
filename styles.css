@@ -102,20 +102,22 @@ main {
 .item-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    gap: 1.5rem;           /* gap between products */
+    justify-content: flex-start; /* left align so they don’t break */
 }
 .item-card {
+    flex: 1 1 calc(50% - 1.5rem);  /* 2 per row */
+    min-width: 250px;              /* ek limit rakhne ke liye */
     background: #FAF7F3;
     border: 2px solid #D9A299;
     border-radius: 20px;
-    flex: 1 1 calc(50% - 2rem);  
     box-shadow: 0 2px 12px #DCC5B222;
     text-align: center;
     padding: 1.2rem;
     margin-bottom: 1rem;
     transition: transform 0.2s;
 }
+
 .item-card:hover {
     transform: scale(1.05);
     border-color: #2D0E3B;
