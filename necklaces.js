@@ -131,8 +131,50 @@ const necklaces = [
         image: "Pink Stone Necklace.jpg",
         price: "Rs 1249",  
         colors: ["Golden"]
+    },
+    {
+        name: "Black&Gold Square Choker",
+        image: "Black&Gold Square Choker.jpg",
+        price: "Rs 659",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Silver Stone Necklace",
+        image: "Silver Stone Necklace.jpg",
+        price: "Rs 699",  
+        colors: ["Silver"]
+    },
+    {
+        name: "Vintage Rose Necklace",
+        image: "Vintage Rose Necklace.jpg",
+        price: "Rs 1559",  
+        colors: ["Black","White"]
+    },
+    {
+        name: "Flower Necklace",
+        image: "Flower Necklace.jpg",
+        price: "Rs 999",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Diamond Heart Necklace",
+        image: "Diamond Heart Necklace.jpg",
+        price: "Rs 999",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Butterfly Stack Necklace",
+        image: "Butterfly Stack Necklace.jpg",
+        price: "Rs 1249",  
+        colors: ["Golden"]
+    },
+    {
+        name: "Bow With Beads Necklace",
+        image: "Bow With Beads Necklace.jpg",
+        price: "Rs 859",  
+        colors: ["Golden"]
     }
-    
+   
 ];
 const necklaceList = document.getElementById('necklaceList');
 necklaces.forEach((necklace, idx) => {
