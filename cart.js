@@ -2,7 +2,8 @@ function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const cartItemsDiv = document.getElementById('cartItems');
     cartItemsDiv.innerHTML = '';
-    let total = 0;
+    let subtotal = 0;
+    const deliveryCharges = 200; // 👈 yahan ap apni delivery charges fix kr skte ho
 
     if (cart.length === 0) {
         cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
@@ -14,7 +15,7 @@ function loadCart() {
         // Safe parse: sirf digits nikal lo
         const priceNum = parseInt(item.price.toString().replace(/\D/g, "")) || 0;
 
-        total += priceNum;
+        subtotal += priceNum;
 
         const card = document.createElement('div');
         card.className = 'item-card';
@@ -28,7 +29,13 @@ function loadCart() {
         cartItemsDiv.appendChild(card);
     });
 
-    document.getElementById('cartTotal').textContent = `Total: Rs ${total}`;
+    const finalTotal = subtotal + deliveryCharges;
+
+    document.getElementById('cartTotal').innerHTML = `
+        Subtotal: Rs ${subtotal} <br>
+        Delivery Charges: Rs ${deliveryCharges} <br>
+        <strong>Total: Rs ${finalTotal}</strong>
+    `;
 }
 
 function removeFromCart(index) {
@@ -43,6 +50,7 @@ function placeOrder() {
     const phone = document.getElementById('customerPhone').value;
     const address = document.getElementById('customerAddress').value;
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const deliveryCharges = 200;
 
     if (!name || !phone || !address || cart.length === 0) {
         alert("Please fill all details and add items to cart.");
@@ -55,15 +63,19 @@ function placeOrder() {
                        `🏠 *Address:* ${address}%0A%0A` +
                        `🛍️ *Items:*%0A`;
 
-    let total = 0;
+    let subtotal = 0;
 
     cart.forEach((item, i) => {
         const priceNum = parseInt(item.price.toString().replace(/\D/g, "")) || 0;
-        total += priceNum;
+        subtotal += priceNum;
         orderDetails += `${i+1}. ${item.name} - Rs ${priceNum}${item.color ? " ("+item.color+")" : ""}%0A`;
     });
 
-    orderDetails += `%0A⭐ *Total:* Rs ${total} ⭐`;
+    const finalTotal = subtotal + deliveryCharges;
+
+    orderDetails += `%0A💰 *Subtotal:* Rs ${subtotal}%0A`;
+    orderDetails += `🚚 *Delivery Charges:* Rs ${deliveryCharges}%0A`;
+    orderDetails += `⭐ *Total:* Rs ${finalTotal} ⭐`;
 
     // 👉 Your WhatsApp Number
     window.open(`https://wa.me/923363766403?text=${orderDetails}`, "_blank");
