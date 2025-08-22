@@ -109,8 +109,7 @@ main {
     background: #FAF7F3;
     border: 2px solid #D9A299;
     border-radius: 20px;
-    flex: 1 1 calc(50% - 2rem);  /* 👈 ek row mai 2 items */
-    max-width: 280px;            /* width control */
+    flex: 1 1 calc(50% - 2rem);  
     box-shadow: 0 2px 12px #DCC5B222;
     text-align: center;
     padding: 1.2rem;
