@@ -23,7 +23,22 @@ const anklets = [
         name: "Single Diamond Anklet",
         image: "Single Diamond Anklet.jpg",
         price: "Rs 949"
-    }
+    },
+    {
+        name: "Multi Heart Anklet",
+        image: "Multi Heart Anklet.jpg",
+        price: "Rs 499"
+    },
+    {
+        name: "Simple Gold Anklet",
+        image: "Simple Gold Anklet.jpg",
+        price: "Rs 499"
+    },
+    {
+        name: "Simple Gold Anklet",
+        image: "Simple Gold Anklet.jpg",
+        price: "Rs 499"
+    },
     
     
 ];
@@ -47,6 +62,7 @@ function addToCart(item) {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(item.name + " added to cart!");
 }
+
 
 
 
