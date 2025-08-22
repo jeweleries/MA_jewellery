@@ -48,8 +48,30 @@ const bracelets = [
         name: "White Flower Bracelet",
         image: "Van Cleef Bracelet White.jpg",
         price: "Rs 1050"
+    },
+    {
+        name: "Diamond Gold Bangle",
+        image: "Diamond Gold Bangle.jpg",
+        price: "Rs 1299"
+    },
+    {
+        name: "Silver Diamond Bracelet",
+        image: "Silver Diamond Bracelet.jpg",
+        price: "Rs 659"
+    },
+    {
+        name: "Knot Handcuff",
+        image: "Knot Handcuff.jpg",
+        price: "Rs 1799"
     }
+     
+   
+   
+   
     
+     
+   
+   
     
    
    
