@@ -34,6 +34,11 @@ const anklets = [
         image: "Simple Gold Anklet.jpg",
         price: "Rs 499"
     },
+    {
+        name: "Multi Gem Anklet",
+        image: "Multi Gem Anklet.jpg",
+        price: "Rs 1899"
+    },
     
     
     
@@ -58,6 +63,7 @@ function addToCart(item) {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(item.name + " added to cart!");
 }
+
 
 
 
