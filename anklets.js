@@ -34,11 +34,7 @@ const anklets = [
         image: "Simple Gold Anklet.jpg",
         price: "Rs 499"
     },
-    {
-        name: "Simple Gold Anklet",
-        image: "Simple Gold Anklet.jpg",
-        price: "Rs 499"
-    },
+    
     
     
 ];
@@ -62,6 +58,7 @@ function addToCart(item) {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(item.name + " added to cart!");
 }
+
 
 
 
