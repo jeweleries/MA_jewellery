@@ -88,7 +88,6 @@ function placeOrder() {
         `Delivery Charges: Rs ${deliveryCharges}`,
         `Total: Rs ${finalTotal}`,
         '',
-        'Please contact the customer to confirm the order.'
     ].join('\n');
 
     // Open user's default mail client with prefilled subject & body
