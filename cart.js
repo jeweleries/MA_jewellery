@@ -39,7 +39,6 @@ function loadCart() {
         <span class="final-total">Total: Rs ${finalTotal}</span>
     </div>
 `;
-
 }
 
 function removeFromCart(index) {
@@ -50,9 +49,9 @@ function removeFromCart(index) {
 }
 
 function placeOrder() {
-    const name = document.getElementById('customerName').value;
-    const phone = document.getElementById('customerPhone').value;
-    const address = document.getElementById('customerAddress').value;
+    const name = (document.getElementById('customerName').value || '').trim();
+    const phone = (document.getElementById('customerPhone').value || '').trim();
+    const address = (document.getElementById('customerAddress').value || '').trim();
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const deliveryCharges = 200;
 
@@ -61,30 +60,42 @@ function placeOrder() {
         return;
     }
 
-    let orderDetails = `✨ *📦 NEW ORDER RECEIVED 📦* ✨%0A%0A` +
-                       `👤 *Name:* ${name}%0A` +
-                       `📞 *Phone:* ${phone}%0A` +
-                       `🏠 *Address:* ${address}%0A%0A` +
-                       `🛍️ *Items:*%0A`;
-
     let subtotal = 0;
+    let itemsText = '';
 
     cart.forEach((item, i) => {
         const priceNum = parseInt(item.price.toString().replace(/\D/g, "")) || 0;
         subtotal += priceNum;
-        orderDetails += `${i+1}. ${item.name} - Rs ${priceNum}${item.color ? " ("+item.color+")" : ""}%0A`;
+        itemsText += `${i+1}. ${item.name} - Rs ${priceNum}${item.color ? " ("+item.color+")" : ""}\n`;
     });
 
     const finalTotal = subtotal + deliveryCharges;
 
-    orderDetails += `%0A💰 *Subtotal:* Rs ${subtotal}%0A`;
-    orderDetails += `🚚 *Delivery Charges:* Rs ${deliveryCharges}%0A`;
-    orderDetails += `⭐ *Total:* Rs ${finalTotal} ⭐`;
+    // Build email content
+    const recipientEmail = 'manoorani98@gmail.com'; // <-- REPLACE with your email address
+    const subject = `New order from ${name} - Total Rs ${finalTotal}`;
+    const body = [
+        '✨ NEW ORDER RECEIVED ✨',
+        '',
+        `Name: ${name}`,
+        `Phone: ${phone}`,
+        `Address: ${address}`,
+        '',
+        'Items:',
+        itemsText,
+        '',
+        `Subtotal: Rs ${subtotal}`,
+        `Delivery Charges: Rs ${deliveryCharges}`,
+        `Total: Rs ${finalTotal}`,
+        '',
+        'Please contact the customer to confirm the order.'
+    ].join('\n');
 
-    // 👉 Your WhatsApp Number
-    window.open(`https://wa.me/923363766403?text=${orderDetails}`, "_blank");
+    // Open user's default mail client with prefilled subject & body
+    const mailto = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
 
-    // ✅ Order ke baad cart clear
+    // Clear cart after initiating email
     localStorage.removeItem('cart');
     loadCart();
 }
