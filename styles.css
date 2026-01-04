@@ -190,3 +190,120 @@ footer {
     right: 20px;    /* right corner pe */
     z-index: 1000;  /* sabke upar rahe */
 }
+/* Slider styles for the Early Discount banner */
+
+/* Basic layout */
+.hero-slider {
+  max-width: 1100px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  min-height: 200px;
+  background: #fff;
+}
+
+/* Each slide */
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 600ms ease, transform 600ms ease;
+  opacity: 0;
+  transform: translateX(10%);
+  color: #111;
+}
+
+/* Visible slide */
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+}
+
+/* Slide content box to ensure readability over images */
+.slide-content {
+  background: rgba(255,255,255,0.85);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  max-width: 420px;
+}
+
+/* Headings / offer text */
+.slide-content h2 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.4rem;
+}
+.slide-content .offer {
+  margin: 0.25rem 0 0.75rem 0;
+  font-weight: 600;
+  color: #c0392b; /* accent color for discount */
+}
+
+/* CTA button */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #c0392b;
+  color: #fff;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Prev/Next buttons */
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.slider-prev { left: 12px; }
+.slider-next { right: 12px; }
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.dots button {
+  width: 10px;
+  height: 10px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.dots button.active {
+  background: #c0392b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .slide-content { max-width: 90%; padding: 0.85rem; }
+  .slide-content h2 { font-size: 1.1rem; }
+  .hero-slider { margin: 0.5rem; }
+}
