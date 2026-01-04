@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> MA_jewellery </title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MA_jewellery</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="slider.css" />
 </head>
 <body>
     <header>
@@ -17,21 +18,60 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Slider: Early discount 15% -->
+    <section class="hero-slider" aria-label="Promotional slider">
+        <div class="slider" id="promoSlider">
+            <div class="slide active" data-index="0" style="background-image:url('images/slide1.jpg')">
+                <div class="slide-content">
+                    <h2>Early Bird Offer</h2>
+                    <p class="offer">Get 15% OFF on your first purchase</p>
+                    <a class="btn" href="bracelets.html">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="slide" data-index="1" style="background-image:url('images/slide2.jpg')">
+                <div class="slide-content">
+                    <h2>Limited Time</h2>
+                    <p class="offer">Extra 15% discount on selected designs</p>
+                    <a class="btn" href="necklaces.html">Explore Necklaces</a>
+                </div>
+            </div>
+
+            <div class="slide" data-index="2" style="background-color:#f6efe8">
+                <div class="slide-content">
+                    <h2>Special Anklet Collection</h2>
+                    <p class="offer">Early discount: 15% OFF — grab your piece</p>
+                    <a class="btn" href="anklets.html">See Anklets</a>
+                </div>
+            </div>
+
+            <button class="slider-prev" aria-label="Previous slide">&lt;</button>
+            <button class="slider-next" aria-label="Next slide">&gt;</button>
+
+            <div class="dots" id="sliderDots" aria-hidden="false"></div>
+        </div>
+    </section>
+
     <main>
         <section class="intro">
             <h2>Welcome!</h2>
-            <p>Discover our exclusive collection of bracelets , necklaces and Anklets.
+            <p>Discover our exclusive collection of bracelets, necklaces and anklets.
                Designed to blend timeless elegance with modern trends.  
                Find the perfect piece that makes every moment unforgettable.  
                Click a category to explore!
             </p>
         </section>
     </main>
+
     <div class="bottom-cart">
         <a href="cart.html" class="cart-link">Cart 🛒</a>
     </div>
+
     <footer>
         <p>&copy; 2025 MA_jewellery. All rights reserved.</p>
     </footer>
+
+    <script src="slider.js" defer></script>
 </body>
 </html>
